@@ -4587,8 +4587,8 @@ func (e *Engine) processInteractiveEvents(state *interactiveState, session *Sess
 			//   compact: freeze+detach to split text into separate cards
 			if !e.display.ThinkingMessages && len(textParts) > segmentStart {
 				if e.display.Mode == "quiet" {
-					if sp.canPreview() && sp.appendSeparator("\n\n") {
-						textParts = append(textParts, "\n\n")
+					if sp.canPreview() && sp.appendSeparator("\n") {
+						textParts = append(textParts, "\n")
 					}
 				} else {
 					if sp.canPreview() {
@@ -4674,8 +4674,8 @@ func (e *Engine) processInteractiveEvents(state *interactiveState, session *Sess
 			//   compact: freeze+detach to split text into separate cards
 			if !e.display.ToolMessages && len(textParts) > segmentStart {
 				if e.display.Mode == "quiet" {
-					if sp.canPreview() && sp.appendSeparator("\n\n") {
-						textParts = append(textParts, "\n\n")
+					if sp.canPreview() && sp.appendSeparator("\n") {
+						textParts = append(textParts, "\n")
 					}
 				} else {
 					if sp.canPreview() {
